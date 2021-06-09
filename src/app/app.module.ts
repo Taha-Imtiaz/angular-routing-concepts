@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { UserlistComponent } from './userlist/userlist.component';
+import { AdminlistComponent } from './adminlist/adminlist.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { UserModule } from './user/user.module';
     UserComponent,
     AdminComponent,
     PageNotFoundComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
+    UserlistComponent,
+    AdminlistComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,12 @@ import { UserModule } from './user/user.module';
     HttpClientModule,
     UsersModule,
     AdminModule,
-    UserModule
+    UserModule,
+    // video # 37
+    FormsModule,
+    // video # 39
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

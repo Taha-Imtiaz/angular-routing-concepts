@@ -31,6 +31,17 @@ const routes: Routes = [
   //   path: "**",
   //   component: PageNotFoundComponent
   // },
+  // video # 34 lazy loading
+  {
+    path: "customer",
+    // load children of customer module
+    loadChildren: () => import("./customer/customer.module").then((module) => module.CustomerModule)
+  },
+  {
+    path: "artist",
+    // load children of artist module
+    loadChildren: () => import("./artist/artist.module").then((module) => module.ArtistModule)
+  }
 ];
 
 @NgModule({

@@ -4,13 +4,25 @@ import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  // {
+  //   path:'login',
+  //   component:LoginComponent
+  // },
+  // {
+  //   path:'list',
+  //   component:ListComponent
+  // }
+  // group routing
   {
-    path:'adminLogin',
-    component:LoginComponent
-  },
-  {
-    path:'adminList',
-    component:ListComponent
+    path:"admin",
+    children:[{
+        path:'login',
+        component:LoginComponent
+      },
+      {
+        path:'list',
+        component:ListComponent
+      }]
   }
 ];
 

@@ -8,29 +8,25 @@ import { SignupComponent } from './users/signup/signup.component';
 
 const routes: Routes = [
   // add routing
-  // {
+  {
 
-  //   path: "users",
-  //   component: UserComponent
-  // },
-  // {
+    path: "users",
+    component: UserComponent
+  },
+  {
 
-  //   path: "admin",
-  //   component: AdminComponent
-  // },
-  // {
-  //   path:"login",
-  //   component: LoginComponent
-  // },
-  // {
-  //   path:"signup",
-  //   component:SignupComponent
-  // },
-  // {
+    path: "admin",
+    component: AdminComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "signup",
+    component: SignupComponent
+  },
 
-  //   path: "**",
-  //   component: PageNotFoundComponent
-  // },
   // video # 34 lazy loading
   {
     path: "customer",
@@ -41,7 +37,12 @@ const routes: Routes = [
     path: "artist",
     // load children of artist module
     loadChildren: () => import("./artist/artist.module").then((module) => module.ArtistModule)
-  }
+  },
+  // {
+
+  //   path: "**",
+  //   component: PageNotFoundComponent
+  // },
 ];
 
 @NgModule({

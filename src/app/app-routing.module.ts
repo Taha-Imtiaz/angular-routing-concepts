@@ -38,11 +38,11 @@ const routes: Routes = [
     // load children of artist module
     loadChildren: () => import("./artist/artist.module").then((module) => module.ArtistModule)
   },
-  // {
+  {
 
-  //   path: "**",
-  //   component: PageNotFoundComponent
-  // },
+    path: "**",
+    component: PageNotFoundComponent
+  },
 ];
 
 @NgModule({

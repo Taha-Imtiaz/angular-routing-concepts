@@ -16,11 +16,11 @@ const routes: Routes = [
   {
     path:"admin",
     children:[{
-        path:'login',
+        path:"login",
         component:LoginComponent
       },
       {
-        path:'list',
+        path:"list",
         component:ListComponent
       }]
   }
